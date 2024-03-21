@@ -1,0 +1,125 @@
+.projetos {
+  background-color: #f9f9f9;
+  color: #000;
+}
+.projetos-container {
+  max-width: 1000px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 2fr;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+  padding: 120px 30px;
+}
+
+.projetos-container .subtitulo {
+  word-break: break-all;
+  max-width: 4.5ch;
+  color: #cccccc;
+}
+
+.lista-projetos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.projeto-item {
+  display: grid;
+  gap: 10px 20px;
+  grid-template-columns: 1fr;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.projeto-item > img {
+  grid-column: 1/ -1;
+  border-radius: 5px 5px 0 0;
+}
+
+.projeto-conteudo {
+  display: grid;
+  gap: 10px;
+  padding: 0 20px;
+}
+
+.projeto-titulo,
+.projeto-tecnologias {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.125rem;
+}
+
+.projeto-descricao {
+  font-size: 0.875rem;
+  line-height: 1.3;
+}
+
+.projeto-botoes {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  margin-bottom: 20px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ver-projeto {
+  background-image: linear-gradient(#ffb801, #df9102);
+  color: #4c3000;
+}
+
+.ver-repositorio {
+  background-color: #cccccc;
+  color: #141414;
+}
+
+@media (max-width: 900px) {
+  .projetos-container {
+    gap: 20px;
+  }
+  .projetos-container .subtitulo {
+    font-size: 5rem;
+  }
+  .projeto-titulo {
+    font-size: 1rem;
+  }
+  .botao {
+    padding: 8px;
+    font-size: 0.625rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .projetos-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    justify-items: center;
+    padding: 60px 20px;
+  }
+  .projetos-container .subtitulo {
+    max-width: initial;
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    color: #292929;
+  }
+}
+
+@media (max-width: 500px) {
+  .projetos-container .subtitulo {
+    font-size: 2.5rem;
+  }
+  .lista-projetos {
+    grid-template-columns: repeat(1, minmax(240px, 360px));
+  }
+}

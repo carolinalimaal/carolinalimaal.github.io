@@ -1,0 +1,36 @@
+.header-menu {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #0a0a0a;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header-menu li a {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: lowercase;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.header-menu li a:hover {
+  background-color: #1a1a1a;
+  transition: 0.5s;
+}
+
+@media (max-width: 500px) {
+  .header-menu{
+    gap: 10px;
+  }
+  .header-menu li a{
+    font-size: 0.875rem;
+    padding: 5px 10px;
+  }
+}
